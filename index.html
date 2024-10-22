@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería ""DELICIOUS BREAD""</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <header>
+        
+        <div class="logo">
+            <img src="Imagenes/logo.jpg" alt="Panadería Delicious Bread">
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>   
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="#Nosotros">NOSOTROS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                    <a href="login.html">
+                        <button>Iniciar sesion</button>
+                    </a>
+                    <a href="cerrar_sesion.php">
+                    <button>cerrar sesion</button>
+                    <a/>
+                </ul>
+            </nav>
+
+            <div class="fondo">
+                <!-- imagen de fondo -->
+            </div>
+            <div id="Nosotros">
+                <h2>Esta es tu panaderia "DELICIOUS BREAD"</h2>
+                    <p>¡Bienvenidos a nuestra panadería "DELICIOUS BREAD"!Sumérgete en el delicioso mundo de los sabores recién horneados y los aromas tentadores que te transportarán a la más dulce de las experiencias. En nuestra panadería, nos esforzamos por crear cada día productos frescos, hechos con ingredientes de la más alta calidad y con el toque artesanal que nos distingue.</p>
+            </div>
+    </header>
+
+        <div class="container">
+
+            <div class="sidebar" id="productos">
+                <h3>Lista de Productos</h3>
+                <ul>
+                    <li><a href="#" onclick="mostrarProducto('Pan de Sal','Este pan, amado por su versatilidad, es el compañero ideal para cualquier momento del día. ','700')">Pan de Sal</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Croissant','Clásico croissant francés hecho con mantequilla', '4000')">Croissant</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Pan de Bono','Famoso por su textura esponjosa y relleno de queso azucarado su sabor es único.','2250')">Pan de Bono</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Pan de Arequipe','La suavidad y esponjosidad del pan con el dulce y cremoso sabor del arequipe. .','1500')">Pan de Arequipe</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Pan de Bocadillo','Es una exquisitez que fusiona la suavidad del pan con el sabor dulce y ligeramente ácido del bocadillo.','1200')">Pan de Bocadillo</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Pan HUAWIANO','El pan Huawainao es una especialidad única que combina la suavidad y esponjosidad del pan con la dulzura tropical del coco.','1700, dependiendo de tamaño e ingredientes')">Pan HUAWIANO</a></li>
+                </ul>
+                    <h3> Bebidas</h3>
+                <ul>
+                    <li><a href="#" onclick="mostrarProducto('Avenas','Ofrece un sabor suave y cremoso, acompañado de los beneficios saludables de la avena. ','2500 ')">Avenas</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Jugos Naturales','Elaborados a partir de frutas y vegetales frescos y sin aditivos artificiales.','4500')">Jugos Naturales</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Cervezas','Una fusión perfecta de granos, lúpulos, levadura y agua que da lugar a una amplia variedad de estilos y sabores.', '2500')">Cervezas</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Chocolate','Ideal para los momentos de tranquilidad, Ideal para los momentos de tranquilidad o como un regalo especial, nuestro chocolate es un testimonio de la pasión y el arte de la chocolatería', '5000')">Chocolate</a></li>
+                    <li><a href="#" onclick="mostrarProducto('Gaseosa','Si prefieres las bebidas frias, esta es la mejor opción,desde su sabor clásico hasta el de frutas exóticas','3000')">Gaseosa</a></li>
+                </ul>
+            </div>
+            
+            <div class="content" id="producto-seleccionado">
+                <!-- El producto seleccionado se mostrará aquí -->
+            </div>
+
+            <div class="developer-info">
+                <h3>Desarrollador</h3>
+                <p>Jorge Mario Bustillo Reyes</p>
+                <p>Tecnólogo en Desarrollo de Software</p>
+                <img src="imagenes/foto de wpp portafolio.jpeg" alt="imagen" title="Jorge Mario Bustillo Reyes">
+            </div>
+        </div>
+
+    <footer>
+      
+            <div class="container1">
+                <div class="div1" id="contacto">
+                    <h4>Contacto:</h4>
+                    <span>
+                        <p> ¡¡Llamanos o escribenos a nuestro Whatsapp: 3002485916</p>
+                        <p> Escribenos a nuestro Correo: jmbustillo06@gmail.com </p>
+                        
+                    
+                </div>
+
+                <div class="div2">
+                        <h4>Redes sociales:</h4>
+                            <a href="https://www.facebook.com/" target="_blank"><img src="imagenes/facebook.jpg" alt="Facebook" title="Faceboock"></a>
+                            <a href="https://twitter.com/" target="_blank"><img src="imagenes/x.png" alt="Twitter" title="Twitter"></a>
+                            <a href="https://www.instagram.com/" target="_blank"><img src="imagenes/instagram.png" alt="Instagram" title="Instagram"></a>
+                        
+                </div>
+            </div>
+            <p class="derechos-autor">Derechos de autor © 2024 Panadería "Delicious Bread". Todos los derechos reservados.<a href="https://protecciondatos-lopd.com/empresas/politica-de-privacidad-web/" target="_blank">Política de privacidad</a></p></p>
+
+    </footer>
+
+    <script>
+         function mostrarProducto(nombreProducto, descripcionProducto, valor) {
+            event.preventDefault() // Evitar el comportamiento predeterminado del enlace
+            var productoSeleccionado = document.getElementById("producto-seleccionado");
+            var imagenProducto = `imagenes/${nombreProducto.toLowerCase()}.jpg`;
+            productoSeleccionado.innerHTML = `
+                <div class="producto">
+                    <h3>${nombreProducto}</h3>
+                    <img src="${imagenProducto}" alt="${nombreProducto}" title="${nombreProducto}">
+                    <h4>Descripción </h4>
+                        <p>${descripcionProducto}</p>
+                        <h4>Valor COP </h4>
+                        <p>${valor}</p>
+                        <a href="logica_venta.php?nombre=${nombreProducto}&precio=${valor}&cantidad=1">
+                            <button>Comprar</button > 
+                        <a/> <br> 
+                        <a href="finalizar_compra.php">
+                            <button>Finalizar compra</button>
+                        </a>
+                </div>
+            `;
+         }
+
+    </script>
+</body>
+</html>

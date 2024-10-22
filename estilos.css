@@ -1,0 +1,176 @@
+/* Estilos generales */
+body {
+    font-family: "krub", sans-serif ;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #Ffffff;
+    padding: 20px;
+    text-align: center;
+}
+nav{
+    font-family: "krub", sans-serif ;;
+    font-weight: 600;
+    font-style: arial;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px
+}
+nav ul li a:hover{
+    color: red;
+}
+
+ul a{
+    text-decoration: none;
+    color:#000000
+    
+} 
+
+.fondo{
+    width:90rem;
+    height: 40rem;
+    background-image: url('imagenes/producto.png'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el div */
+    background-position: center; 
+    background-size: 100% 100%;
+    margin: auto;
+}
+h2{
+    color: #000000;
+}
+
+h3 {
+    font-family: "krub"sans-serif;
+    color: #333;
+    font-style: italic;
+    
+}
+h3:hover{
+    color:#b20303;
+}
+.logo img {
+    max-width: 170px;
+    
+}
+
+#Nosotros{
+   
+    padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style:italic ;
+    font-size: 20px;
+   
+}
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+   
+}
+/* Estilos para las columnas (lista de productos, visualización de productos, información del desarrollador) */
+.sidebar{
+    width: 25%; /* Ocuparán todo el ancho del contenedor */
+    padding: 20px;
+    background: #e1a6b4;
+    border-right: 1px;
+    border-right: solid ;
+    border-right-color: #583b0f ;
+    
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background: beige
+}
+.developer-info {
+    width: 25%; /* Ajusta según tus preferencias */
+    padding: 20px;
+    background: #e1a6b4;
+    border-left: 1px;
+    border-left: solid ;
+    border-left-color: #583b0f ;
+    
+    img{
+        height:150px;
+        margin-left: 50px;
+
+    }
+
+}
+#producto-seleccionado img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 70px;
+}
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #454343;
+    color: #fff;
+    padding: 5px ;
+    font-style: verdana;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 140px;
+}
+
+.div1{
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+
+.div1, .div2{
+
+    flex: 1;
+    align-items: center;
+}
+
+.div2{
+    margin-top: -40px;
+    text-align: right;
+
+    img {
+        width: 30px; /* Establece el ancho deseado para los iconos */
+        height: 30px; /* Establece la altura deseada para los iconos */
+        margin: 0 5px; /* Espacio entre los iconos */
+        transition: filter 0.3s ease; /* Agrega una transición suave */
+}
+}
+.div2 img:hover{
+    filter: invert(100%); 
+
+}
+.derechos-autor  {
+    text-align: right;
+    font-size: 12px;
+    color:#918e8e;
+    margin-left: 350px;
+
+}
+.derechos-autor a{
+    text-decoration: none;
+    color:#918e8e;
+ 
+}
